@@ -5,7 +5,8 @@ jl.config({
 	prompt:"mask",
 	base:view_url+"assets/",
 	alias:{
-		"appframework":"relylib/appframework/appframework"
+		"appframework":"relylib/appframework/appframework",
+		"jquery":"relylib/jquery/jquery-1_7_2"
 	},
 	paths:{
 		"js":"js",

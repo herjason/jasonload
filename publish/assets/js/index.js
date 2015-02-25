@@ -1,5 +1,5 @@
-define("js/index",["appframework"],function(require,exports,module){
-	var $=require("appframework");																				  
+define("js/index",["jquery"],function(require,exports,module){
+	var $=require("jquery");																			  
 	var index=function(opt){
 		var self=this;
 		self.opt=$.extend({},{},opt);
