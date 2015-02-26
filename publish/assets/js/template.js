@@ -1,5 +1,5 @@
-define("js/template",["appframework"],function(require,exports,module){
-	var $=require("appframework");																				  
+define("js/template",["jquery"],function(require,exports,module){
+	var $=require("jquery");																				  
 	var module_class=function(opt){
 		var self=this;
 		self.opt=$.extend({},{},opt);

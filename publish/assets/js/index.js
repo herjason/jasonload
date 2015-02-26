@@ -31,14 +31,26 @@ define("js/index",["jquery"],function(require,exports,module){
 				'<ul class="jList jMargin3 jPadding5">'+
 					'<li>jasonload框架是一个实现整站模块化开发的框架，每个页面是一个js，通过jl.gotoMod()和jl.backtoMod()方法来加载跳转。</li>'+
 					'<li class="template">跳转到template页</li>'+
+					'<li class="setDataBtn">setData("test",{retcode:0,retmsg:"success"})</li>'+
+					'<li class="getDataBtn">getData("test")</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
 		},
 		indexEvent:function(){
-			//返回
+			//跳转到template页
 			$('#index_content .template').bind('click',function(){
-				jl.backtoMod("js/template");
+				jl.gotoMod("js/template");
+			});
+			//setData
+			$("#index_content .setDataBtn").bind("click",function(){
+				jl.setData("test",{retcode:0,retmsg:"success"});
+				alert("保存成功");
+			});
+			//getData
+			$("#index_content .getDataBtn").bind("click",function(){
+				console.log(jl.getData("test"));
+				alert(jl.getData("test"))
 			});
 		}
 	};
