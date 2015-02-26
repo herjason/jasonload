@@ -27,8 +27,8 @@ jl.config({
 	}
 });
 var cssTag={
-	index:"0"
+	js/index:"0"
 };
 var jsTag={
-	index:"0"
+	js/index:"0"
 };
