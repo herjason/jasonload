@@ -20,15 +20,9 @@ jl.config({
 	],
 	preload:["jasonwap/css/jasonUI.css?insertToFirst"],
 	cssTag:{
-		index:"0"
+		"js/index":"0"
 	},
 	jsTag:{
-		index:"0"
+		"js/index":"0"
 	}
 });
-var cssTag={
-	js/index:"0"
-};
-var jsTag={
-	js/index:"0"
-};
