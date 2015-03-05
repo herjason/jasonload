@@ -44,7 +44,7 @@ define("js/index",["jquery"],function(require,exports,module){
 			});
 			//setData
 			$("#index_content .setDataBtn").bind("click",function(){
-				jl.setData("test","success",20);
+				jl.setData("test","success",6);
 				alert("保存成功");
 			});
 			//getData
