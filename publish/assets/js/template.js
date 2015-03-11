@@ -31,6 +31,8 @@ define("js/template",["jquery"],function(require,exports,module){
 				'<div class="jMargin3">介绍</div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
 					'<li class="template">这是一个模块化的模板页面。</li>'+
+					'<li class="setIndexData">设置首页保存的数据</li>'+
+					'<li class="getIndexData">获取首页保存的数据</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -39,6 +41,17 @@ define("js/template",["jquery"],function(require,exports,module){
 			//返回
 			$('#template_content .jTop').bind('click',function(){
 				jl.backtoMod("js/index");
+			});
+			
+			//set index data
+			$('#template_content .setIndexData').bind("click",function(){
+				jl.setData("test","template",false,"js/index");
+				alert("success")
+			});
+
+			//get index data
+			$('#template_content .getIndexData').bind("click",function(){
+				alert(jl.getData("test","js/index"))
 			});
 		}
 	};

@@ -52,12 +52,8 @@ define("js/index",["jquery"],function(require,exports,module){
 				console.log(jl.getData("test"));
 				alert(jl.getData("test"))
 			});
-			console.log(JSON.stringify("success"));
-			try{
-				console.log(JSON.parse('"success"'))
-			}catch(err){
-				console.log(222)
-			}
+			var undefined;
+			console.log(typeof(test));
 		}
 	};
 
