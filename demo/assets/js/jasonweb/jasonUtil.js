@@ -1,4 +1,4 @@
-define("js/jasonweb/jasonUtil",["jquery","jasonwap/jasonUtil"],function(require,exports,module){
+define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,exports,module){
 	var $=require("jquery");
 	var util=require("jasonweb/jasonUtil");																  
 	var jasonUtil=function(opt){
@@ -23,7 +23,7 @@ define("js/jasonweb/jasonUtil",["jquery","jasonwap/jasonUtil"],function(require,
 			var self=this;
 			var template='';
 			template+=''+
-			'<div id="jasonwap_jasonUtil_box" class="jasonwap_jasonUtil_box">'+
+			'<div id="jasonweb_jasonUtil_box" class="jasonweb_jasonUtil_box">'+
 				'<div class="jTop">'+
 					'<div class="jLeft">返回</div>'+
 					'<div class="jCenter">jasonUtil.js工具包</div>'+
@@ -43,35 +43,35 @@ define("js/jasonweb/jasonUtil",["jquery","jasonwap/jasonUtil"],function(require,
 		},
 		jasonUtilEvent:function(){
 			//返回
-			$('#jasonwap_jasonUtil_box .jTop').bind('click',function(){
-				jl.backtoMod("js/jasonwap/index");
+			$('#jasonweb_jasonUtil_box .jTop').bind('click',function(){
+				jl.backtoMod("js/jasonweb/index");
 			});
 			//显示提示框
-			$("#jasonwap_jasonUtil_box .showMask").bind("click",function(){
+			$("#jasonweb_jasonUtil_box .showMask").bind("click",function(){
 				util.showMask("这是提示信息，6秒后自动调用隐藏提示框函数");
 				setTimeout(function(){util.hideMask()},6000);
 			});
 			//隐藏提示框
-			$("#jasonwap_jasonUtil_box .hideMask").bind("click",function(){
+			$("#jasonweb_jasonUtil_box .hideMask").bind("click",function(){
 				util.hideMask();
 			});
 			//闪现提示框
-			$("#jasonwap_jasonUtil_box .flashMask").bind("click",function(){
+			$("#jasonweb_jasonUtil_box .flashMask").bind("click",function(){
 				util.flashMask("这个提示信息默认显示2秒钟");
 			});
 			//闪现提示信息后改变该文本。
-			$("#jasonwap_jasonUtil_box .flashMaskCallback").bind("click",function(){
+			$("#jasonweb_jasonUtil_box .flashMaskCallback").bind("click",function(){
 				var $obj=$(this);
 				util.flashMask("这个提示信息设置显示5秒钟，5秒后将改变按钮文本为“5秒后的文本”",function(){
 					$obj.html("5秒后的文本")
 				});
 			});
 			//获取地址栏参数a的值
-			$("#jasonwap_jasonUtil_box .getParamA").bind("click",function(){
+			$("#jasonweb_jasonUtil_box .getParamA").bind("click",function(){
 				util.flashMask(util.getParam("a"));
 			});
 			//获取地址栏参数b的值
-			$("#jasonwap_jasonUtil_box .getParamB").bind("click",function(){
+			$("#jasonweb_jasonUtil_box .getParamB").bind("click",function(){
 				util.flashMask(util.getParam("b"));
 			});
 		}

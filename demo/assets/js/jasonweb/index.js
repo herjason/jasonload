@@ -23,8 +23,8 @@ define("js/jasonweb/index",["jquery"],function(require,exports,module){
 				'<ul class="jList jMargin3 jPadding5">'+
 					'<li class="jasonPopup">1、jasonPopup.js弹出框</li>'+
 					//'<li class="jasonSelectDlg">2、jasonSelectDlg选择框</li>'+
-					//'<li class="jasonUtil">3、jasonUtil.js工具包</li>'+
-					//'<li class="jasonValidate">4、jasonValidate.js提交验证</li>'+
+					'<li class="jasonUtil">2、jasonUtil.js工具包</li>'+
+					'<li class="jasonValidate">3、jasonValidate.js提交验证</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -38,6 +38,14 @@ define("js/jasonweb/index",["jquery"],function(require,exports,module){
 			//弹出框（默认中间弹出）
 			$("#jasonweb_index_box .jasonPopup").bind("click",function(){
 				jl.gotoMod("js/jasonweb/jasonPopup");
+			});
+			//工具包
+			$("#jasonweb_index_box .jasonUtil").bind("click",function(){
+				jl.gotoMod("js/jasonweb/jasonUtil");
+			});
+			//提交验证
+			$("#jasonweb_index_box .jasonValidate").bind("click",function(){
+				jl.gotoMod("js/jasonweb/jasonValidate");
 			});
 		}
 	};

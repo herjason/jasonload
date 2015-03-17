@@ -21,6 +21,7 @@ define("js/index",["jquery"],function(require,exports,module){
 				'<div class="jMargin3" data-rules="1">jasonload.js模块化开发</div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
 					'<li class="template">1、模块化页面演示</li>'+
+					'<li><a href="#tab">模块化页面演示</a></li>'+
 				'</ul>'+
 				'<div class="jMargin3"><a name="test">插件库</a></div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
