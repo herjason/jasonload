@@ -1,7 +1,7 @@
-define("js/jasonwep/jasonValidate",["jquery","jasonwap/jasonSelectDlg","jasonwap/jasonUtil"],function(require,exports,module){
+define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(require,exports,module){
 	var $=require("jquery");
-	var util=require("jasonwep/jasonUtil");
-	require.async("jasonwep/jasonValidate");																	  
+	var util=require("jasonweb/jasonUtil");
+	require.async("jasonweb/jasonValidate");																	  
 	var jasonValidate=function(opt){
 		var self=this;
 		self.opt=$.extend({},{},opt);
@@ -24,7 +24,7 @@ define("js/jasonwep/jasonValidate",["jquery","jasonwap/jasonSelectDlg","jasonwap
 			var self=this;
 			var template='';
 			template+=''+
-			'<div id="jasonwep_jasonValidate_box" class="jasonwep_jasonValidate_box">'+
+			'<div id="jasonweb_jasonValidate_box" class="jasonweb_jasonValidate_box">'+
 				'<div class="jTop">'+
 					'<div class="jLeft">返回</div>'+
 					'<div class="jCenter">jasonValidate.js提交校验</div>'+
@@ -43,7 +43,7 @@ define("js/jasonwep/jasonValidate",["jquery","jasonwap/jasonSelectDlg","jasonwap
 					'</li>'+
 					'<li class="jLeftFixed">'+
 						'<label class="jLeft">身份类型：</label>'+
-						'<div class="jRight idenType">请选择</div>'+
+						'<div class="jRight"><select><option>请选择</option><option value="1">身份证</option><option value="2">驾驶证</option></select></div>'+
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>年龄：</label>'+
@@ -60,7 +60,7 @@ define("js/jasonwep/jasonValidate",["jquery","jasonwap/jasonSelectDlg","jasonwap
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>邮箱：</label>'+
-						'<input type="number" data-rules="{required:[true,\'请输入邮箱\'],email:[true,\'请输入正确的邮箱格式\']" placeholder="请输入邮箱" />'+
+						'<input type="text" data-rules="{required:[true,\'请输入邮箱\'],email:[true,\'请输入正确的邮箱格式\']}" placeholder="请输入邮箱" />'+
 					'</li>'+
 				'</ul>'+
 				'<div class="jBtn jMargin3 submit">提交</div>'+
@@ -69,18 +69,15 @@ define("js/jasonwep/jasonValidate",["jquery","jasonwap/jasonSelectDlg","jasonwap
 		},
 		jasonValidateEvent:function(){
 			//返回
-			$('#jasonwep_jasonValidate_box .jTop').bind('click',function(){
-				jl.backtoMod("js/jasonwap/index");
+			$('#jasonweb_jasonValidate_box .jTop').bind('click',function(){
+				jl.backtoMod("js/jasonweb/index");
 			});
-			//绑定身份类型
-			var idenTypeList=[{value:1,text:"身份证"},{value:2,text:"驾驶证"}]
-			$("#jasonwep_jasonValidate_box .idenType").jasonSelectDlg(idenTypeList)
 			//绑定提交按钮
-			$("#jasonwap_jasonValidate_box .submit").bind("click",function(){
-				jl.use("jasonwep/jasonValidate",function(validate){
-					validate({src:"#jasonwap_jasonValidate_box",callback:function(){
+			$("#jasonweb_jasonValidate_box .submit").bind("click",function(){
+				jl.use("jasonweb/jasonValidate",function(validate){
+					validate({src:"#jasonweb_jasonValidate_box",callback:function(){
 						console.log("success");
-						console.log(util.radioVal("#jasonwap_jasonValidate_box .sex input"))
+						console.log(util.radioVal("#jasonweb_jasonValidate_box .sex input"))
 					}});
 				});
 			});
