@@ -50,7 +50,7 @@ define("js/jasonweb/jasonPopup",["jquery","jasonweb/jasonPopup"],function(requir
 			console.log($(window).height())
 			//返回
 			$('#jasonweb_jasonPopup_box .jTop').bind('click',function(){
-				jl.backtoMod("js/jasonwap/index");
+				jl.backtoMod("js/jasonweb/index");
 			});
 			//基本弹出框
 			$("#jasonweb_jasonPopup_box .popup").bind("click",function(){
