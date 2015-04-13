@@ -37,9 +37,7 @@ define("js/index",["jquery"],function(require,exports,module){
 			var self=this;
 			//跳转到template页
 			$('#index_box .template').bind('click',function(){
-				jl.gotoMod("js/template",function(){ 
-					console.log(333)
-				});
+				jl.gotoMod("js/template",{test:888});
 			});
 			//setData
 			$("#index_box .setDataBtn").bind("click",function(){

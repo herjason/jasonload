@@ -43,7 +43,7 @@ define("js/template",["appframework"],function(require,exports,module){
 			$('#template_box .jTop').bind('click',function(){
 				jl.backtoMod("js/index");
 			});
-			
+			console.log(self.opt)
 			//set index data
 			$('#template_box .setIndexData').bind("click",function(){
 				jl.setData("test","template",false,"js/index");
