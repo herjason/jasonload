@@ -35,14 +35,14 @@ define("js/template",["appframework"],function(require,exports,module){
 					'<li class="getIndexData">获取首页保存的数据</li>'+
 				'</ul>'+
 			'</div>';
-			jl.show(template);
+			jl.html(template);
 		},
 		templateEvent:function(){
 			var self=this;
 			//返回
 			$('#template_box .jTop').bind('click',function(){
 				jl.backtoMod(function(){
-					alert("yes")
+					//alert("yes")
 				});
 			});
 			console.log(self.opt)
