@@ -39,6 +39,7 @@ define("js/index",["jquery"],function(require,exports,module){
 			$('#index_box .template').bind('click',function(){
 				jl.gotoMod("js/template",{test:888});
 			});
+			console.log($("#index_box .jasonwap"))
 			//setData
 			$("#index_box .setDataBtn").bind("click",function(){
 				jl.setData("test","success");
