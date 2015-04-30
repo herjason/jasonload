@@ -35,7 +35,7 @@ define("js/template",["appframework"],function(require,exports,module){
 					'<li class="getIndexData">获取首页保存的数据</li>'+
 				'</ul>'+
 			'</div>';
-			jl.html(template);
+			jl.show(template);
 		},
 		templateEvent:function(){
 			var self=this;

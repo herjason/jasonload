@@ -37,6 +37,8 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 					'<li class="flashMaskCallback">闪现提示信息后改变该文本。</li>'+
 					'<li class="getParamA">获取地址栏参数"a"的值</li>'+
 					'<li class="getParamB">获取地址栏参数"b"的值</li>'+
+					'<li class="objToJson">转换对象为json字符串</li>'+
+					'<li class="arrayToJson">转换对象数组为json字符串</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -73,6 +75,16 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 			//获取地址栏参数b的值
 			$("#jasonweb_jasonUtil_box .getParamB").bind("click",function(){
 				util.flashMask(util.getParam("b"));
+			});
+			//转换对象为json字符串
+			$("#jasonweb_jasonUtil_box .objToJson").bind("click",function(){
+				var obj={test1:"111",test2:2222,test3:[{test3_1:333,test3_2:"yes"}]};
+				alert(util.stringify(obj));
+			});
+			//转换对象数组为json字符串
+			$("#jasonweb_jasonUtil_box .arrayToJson").bind("click",function(){
+				var obj=[{test1:"111",test2:2222,test3:[{test3_1:333,test3_2:"yes"}]},{test1:"111",test2:2222,test3:[{test3_1:333,test3_2:"yes"}]}];
+				alert(util.stringify(obj));
 			});
 		}
 	};
