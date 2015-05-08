@@ -41,6 +41,7 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 					'<li class="getParamB">获取地址栏参数"b"的值</li>'+
 					'<li class="objToJson">转换对象为json字符串</li>'+
 					'<li class="arrayToJson">转换对象数组为json字符串</li>'+
+					'<li class="getTime">转换日期时间2015-05-03 10:59和2015-05-08 10:59为毫秒数</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -95,6 +96,10 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 			$("#jasonweb_jasonUtil_box .arrayToJson").bind("click",function(){
 				var obj=[{test1:"111",test2:2222,test3:[{test3_1:333,test3_2:"yes"}]},{test1:"111",test2:2222,test3:[{test3_1:333,test3_2:"yes"}]}];
 				alert(util.stringify(obj));
+			});
+			//转换日期时间2015-05-03 10:59和2015-05-08 10:59为毫秒数
+			$("#jasonweb_jasonUtil_box .getTime").bind("click",function(){
+				alert(util.getTime("2015-05-03 10:59")+","+util.getTime("2015-05-08 10:59"))
 			});
 		}
 	};

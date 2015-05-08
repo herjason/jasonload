@@ -37,6 +37,7 @@ define("js/jasonwap/jasonUtil",["appframework","jasonwap/jasonUtil"],function(re
 					'<li class="flashMaskCallback">闪现提示信息后改变该文本。</li>'+
 					'<li class="getParamA">获取地址栏参数"a"的值</li>'+
 					'<li class="getParamB">获取地址栏参数"b"的值</li>'+
+					'<li class="getTime">转换日期时间2015-05-03 10:59和2015-05-08 10:59为毫秒数</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -73,6 +74,10 @@ define("js/jasonwap/jasonUtil",["appframework","jasonwap/jasonUtil"],function(re
 			//获取地址栏参数b的值
 			$("#jasonwap_jasonUtil_box .getParamB").bind("click",function(){
 				util.flashMask(util.getParam("b"));
+			});
+			//转换日期时间2015-05-03 10:59和2015-05-08 10:59为毫秒数
+			$("#jasonwap_jasonUtil_box .getTime").bind("click",function(){
+				alert(util.getTime("2015-05-03 10:59")+","+util.getTime("2015-05-08 10:59"))
 			});
 		}
 	};
