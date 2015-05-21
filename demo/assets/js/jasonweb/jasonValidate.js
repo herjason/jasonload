@@ -46,7 +46,7 @@ define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(requ
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>年龄：</label>'+
-						'<input type="text" data-rules="{min:[\'6\',\'年龄必须在6岁以上\'],max:[26,\'年龄必须在26岁以下\']}" placeholder="请输入年龄，16岁以上" />'+
+						'<input type="text" data-rules="{min:[6,\'年龄必须在6岁以上\'],max:[26,\'年龄必须在26岁以下\']}" placeholder="请输入年龄，16岁以上" />'+
 					'</li>'+
 					'<li class="jLeftFixed">'+
 						'<label class="jLeft">性别：</label>'+
