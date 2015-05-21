@@ -34,8 +34,7 @@ define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(requ
 				'<ul class="jList jMargin3 jPadding5">'+
 					'<li class="jLabelInput">'+
 						'<label>用户名：</label>'+
-						//'<input class="name" data-rules="{required:[true,\'请输入用户名\']}" placeholder="请输入用户名" />'+
-						'<input class="name" placeholder="请输入用户名" />'+
+						'<input class="name" data-rules_old="{required:[true,\'请输入用户名\']}" placeholder="请输入用户名" />'+
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>密&nbsp;&nbsp;码：</label>'+
@@ -47,8 +46,7 @@ define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(requ
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>年龄：</label>'+
-						//'<input type="number" data-rules="{min:[\'a\',\'年龄必须在16岁以上\'],max:[26,\'年龄必须在26岁以下\'],number:[true,\'年龄必须为数值\']}" placeholder="请输入年龄，16岁以上" />'+
-						'<input type="number" placeholder="请输入年龄，16岁以上" />'+
+						'<input type="text" data-rules="{min:[\'6\',\'年龄必须在6岁以上\'],max:[26,\'年龄必须在26岁以下\']}" placeholder="请输入年龄，16岁以上" />'+
 					'</li>'+
 					'<li class="jLeftFixed">'+
 						'<label class="jLeft">性别：</label>'+
@@ -59,8 +57,24 @@ define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(requ
 						'</div>'+
 					'</li>'+
 					'<li class="jLabelInput">'+
+						'<label>校验长度：</label>'+
+						'<input type="text" data-rules_lod="{len:[6,\'校验长度必须为6\']}" placeholder="请输入长度为6的字符" />'+
+					'</li>'+
+					'<li class="jLabelInput">'+
+						'<label>最小长度：</label>'+
+						'<input type="text" data-rules_old="{minLen:[6,\'最小长度必须为6\']}" placeholder="请输入最小长度为6的字符" />'+
+					'</li>'+
+					'<li class="jLabelInput">'+
+						'<label>最大长度：</label>'+
+						'<input type="text" data-rules_old="{maxLen:[6,\'最大长度只能为6\']}" placeholder="请输入最大长度为6的字符" />'+
+					'</li>'+
+					'<li class="jLabelInput">'+
 						'<label>邮箱：</label>'+
-						'<input type="text" data-rules="{required:[true,\'请输入邮箱\'],email:[true,\'请输入正确的邮箱格式\']}" placeholder="请输入邮箱" />'+
+						'<input type="text" data-rules="{email:[true,\'请输入正确的邮箱格式\']}" placeholder="请输入邮箱" />'+
+					'</li>'+
+					'<li class="jLabelInput">'+
+						'<label>DIV节点值：</label>'+
+						'<div data-value="fff33" data-rules="{valueType:\'data-value\',required:[true,\'请输入DIV节点值\'],regExp:[\'^[0-9]+[xX]*$\',\'DIV节点值格式不对\'],email:[true,\'请输入正确的邮箱格式\']}" placeholder="请输入邮箱" />'+
 					'</li>'+
 				'</ul>'+
 				'<div class="jBtn jMargin3 submit">提交</div>'+
@@ -72,6 +86,7 @@ define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(requ
 			$('#jasonweb_jasonValidate_box .jTop').bind('click',function(){
 				jl.backtoMod("js/jasonweb/index");
 			});
+			console.log(typeof(""))
 			//绑定提交按钮
 			$("#jasonweb_jasonValidate_box .submit").bind("click",function(){
 				jl.use("jasonweb/jasonValidate",function(validate){
