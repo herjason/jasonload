@@ -37,6 +37,7 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 					'<li class="flashMaskCallback">闪现提示信息后改变该文本。</li>'+
 					'<li class="gotoUrl">加载跳转函数</li>'+
 					'<li class="openUrl">加载新开窗口</li>'+
+					'<li class="submitForm">表单提交</li>'+
 					'<li class="getParamA">获取地址栏参数"a"的值</li>'+
 					'<li class="getParamB">获取地址栏参数"b"的值</li>'+
 					'<li class="objToJson">转换对象为json字符串</li>'+
@@ -78,6 +79,10 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 			//加载新开窗口
 			$("#jasonweb_jasonUtil_box .openUrl").bind("click",function(){
 				util.openUrl("http://www.baidu.com");
+			});
+			//表单提交
+			$("#jasonweb_jasonUtil_box .submitForm").bind("click",function(){
+				util.submitForm("http://www.baidu.com?action=submit");
 			});
 			//获取地址栏参数a的值
 			$("#jasonweb_jasonUtil_box .getParamA").bind("click",function(){
