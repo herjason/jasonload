@@ -43,6 +43,8 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 					'<li class="objToJson">转换对象为json字符串</li>'+
 					'<li class="arrayToJson">转换对象数组为json字符串</li>'+
 					'<li class="getTime">转换日期时间2015-05-03 10:59和2015-05-08 10:59为毫秒数</li>'+
+					'<li class="placeholder"><input type="text" placeholder="测试值" /></li>'+
+					'<li class="prompt"><span jasonPrompt="{template}">？</span></li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -106,6 +108,10 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 			$("#jasonweb_jasonUtil_box .getTime").bind("click",function(){
 				alert(util.getTime("2015-05-03 10:59")+","+util.getTime("2015-05-08 10:59"))
 			});
+			//重写placeholder属性，兼容支持所有浏览器
+			util.placeholder();
+			//绑定属性jasonPrompt显示提示框
+			util.prompt({template:'<div style="width:80px;border:1px solid #ccc;">这是提示框显示的内容</div>'});
 		}
 	};
 
