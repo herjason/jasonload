@@ -1,7 +1,4 @@
 var site_url=window.location.host?"http://"+window.location.host:"file:///D:/工作/08jasonload/demo/";
-if(site_url=="file:///D:/工作/08jasonload/demo/"){
-	alert("您当前是在本地使用静态页面直接进行打开调试，需要先修改站点根目录路径变量site_url，配置文件位于assets/jasonload/config.js");
-}
 var view_url=site_url;
 var img_url=view_url+"assets/img/";
 jl.config({
