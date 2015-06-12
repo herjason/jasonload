@@ -62,7 +62,8 @@ define("js/jasonwap/jasonPopup",["appframework","jasonwap/jasonPopup"],function(
 					title:"不带按钮弹出框",
 					message:"<div>弹出框内容，支持html</div>",
 					noBtn:true,
-					isBgClick:true
+					isBgClick:true,
+					isBoxClick:true
 				});
 			});
 			//带关闭按钮弹出框
