@@ -54,17 +54,6 @@ define("js/jasonwap/index",["jasonwap/jasonSelectDlg"],function(require,exports,
 			});
 		}
 	};
-	try{
-		var aaa=new index();
-		console.log(aaa)
-		var kkk=JSON.stringify(index.toString())
-			console.log(kkk)
-		var ddd=eval('('+kkk+')')
-			console.log(ddd)
-		console.log(typeof(bbb))
-		}catch(err){
-			console.log(222)
-		}
 	module.exports=index;
 
 });

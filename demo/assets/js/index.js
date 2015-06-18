@@ -19,11 +19,14 @@ define("js/index",["jquery"],function(require,exports,module){
 				'</div>'+
 				'<div class="jTopHeight" data-rules="1"></div>'+
 				'<div class="jMargin3" data-rules="1">jasonload.js模块化开发</div>'+
+				'<ul class="jList jMargin3 jPadding5" style="font-size:12px;line-height:26px;">'+
+					'<li>jasonload框架是一个实现整站模块化开发的框架，每个页面是一个js模块，遵循CMD规范。模块页面通过jl.initMod()、jl.gotoMod()、jl.backtoMod()和jl.runMod()方法来初始、运行、跳转和回退模块页面。同时框架提供更多丰富的接口，如：前端缓存接口setData()、getData()等，具体请查看下载包里jasonload文件下的jasonload.doc说明文档。</li>'+
+				'</ul>'+
+				'<div class="jMargin3">部分接口演示</div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
-					'<li>jasonload框架是一个实现整站模块化开发的框架，每个页面是一个js，通过jl.gotoMod()和jl.backtoMod()方法来加载跳转。</li>'+
 					'<li class="template">跳转到template模板页</li>'+
-					'<li class="setDataBtn">setData("test",{retcode:0,retmsg:"success"})</li>'+
-					'<li class="getDataBtn">getData("test")</li>'+
+					'<li class="setDataBtn">缓存数据</li>'+
+					'<li class="getDataBtn">获取缓存数据</li>'+
 				'</ul>'+
 				'<div class="jMargin3"><a name="test">插件库</a></div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
@@ -47,7 +50,6 @@ define("js/index",["jquery"],function(require,exports,module){
 			});
 			//getData
 			$("#index_box .getDataBtn").bind("click",function(){
-				console.log(jl.getData("test"));
 				alert(jl.getData("test"))
 			});
 			//jasonwap手机端插件库

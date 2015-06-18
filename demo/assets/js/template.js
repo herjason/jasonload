@@ -30,7 +30,7 @@ define("js/template",["appframework"],function(require,exports,module){
 				'<div class="jTopHeight"></div>'+
 				'<div class="jMargin3">介绍</div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
-					'<li class="template">这是页面是使用模块化开发方式实现的，整个页面是一个js，通过jasonload.js的gotoMod()和backtoMod()方法来加载跳转。</li>'+
+					'<li class="template" style="line-height:26px;">这是页面是使用模块化开发方式实现的，整个页面是一个js模块，遵循CMD规范。</li>'+
 					'<li class="setIndexData">设置首页保存的数据</li>'+
 					'<li class="getIndexData">获取首页保存的数据</li>'+
 				'</ul>'+
