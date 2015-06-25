@@ -1,4 +1,4 @@
-var site_url=window.location.host?"http://"+window.location.host+"/demo/":"file:///D:/工作/08jasonload/demo/";
+var site_url=window.location.host?"http://"+window.location.host:"file:///D:/工作/08jasonload/demo/";
 var view_url=site_url;
 var img_url=view_url+"assets/img/";
 jl.config({
