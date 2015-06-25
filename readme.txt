@@ -1,3 +1,4 @@
+官方demo演示网址：http://jasonload.zglingjie.com/demo/
 publish文件夹为jasonload框架发布包，里面包含模块化页面js模板template.js和页面调用模板index.html。
 
 publish发布包文件结构说明：
