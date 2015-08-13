@@ -70,7 +70,7 @@ define("js/jasonweb/jasonValidate",["jquery","jasonweb/jasonUtil"],function(requ
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>邮箱：</label>'+
-						'<input type="text" data-rules="{email:[true,\'请输入正确的邮箱格式\']}" placeholder="请输入邮箱" />'+
+						'<input type="text" data-rules_old="{email:[true,\'请输入正确的邮箱格式\']}" placeholder="请输入邮箱" />'+
 					'</li>'+
 					'<li class="jLabelInput">'+
 						'<label>DIV节点值：</label>'+
