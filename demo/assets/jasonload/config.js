@@ -1,4 +1,4 @@
-var site_url=window.location.host?"http://"+window.location.host:"file:///G:/工作/6创作/jasonload/demo/";
+var site_url=window.location.host?"http://"+window.location.host+"/":"file:///G:/百度云同步盘/创作/jasonload/demo/";
 var view_url=site_url;
 var img_url=view_url+"assets/img/";
 jl.config({
@@ -27,5 +27,6 @@ jl.config({
 		js_index:"0"
 	},
 	pageAnimate:500,
+	setDataExpired:60*60*24,//单位为秒
 	index:"js/index"//首页页面模块id
 });
