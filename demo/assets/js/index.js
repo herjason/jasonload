@@ -30,8 +30,9 @@ define("js/index",["jquery"],function(require,exports,module){
 				'</ul>'+
 				'<div class="jMargin3"><a name="test">插件库</a></div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
-					'<li class="jasonwap">1、jasonwap手机端插件库</li>'+
-					'<li class="jasonweb">2、jasonweb电脑端插件库</li>'+
+					'<li class="common_plugin">1、common_plugin手机电脑通用插件库</li>'+
+					'<li class="jasonwap">2、jasonwap手机端插件库</li>'+
+					'<li class="jasonweb">3、jasonweb电脑端插件库</li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -42,7 +43,6 @@ define("js/index",["jquery"],function(require,exports,module){
 			$('#index_box .template').bind('click',function(){
 				jl.gotoMod("js/template",{test:888});
 			});
-			console.log($("#index_box .jasonwap"))
 			//setData
 			$("#index_box .setDataBtn").bind("click",function(){
 				jl.setData("test","success");
@@ -51,6 +51,10 @@ define("js/index",["jquery"],function(require,exports,module){
 			//getData
 			$("#index_box .getDataBtn").bind("click",function(){
 				alert(jl.getData("test"))
+			});
+			//common_plugin手机电脑通用插件库
+			$("#index_box .common_plugin").bind("click",function(){
+				jl.gotoMod("js/common_plugin/index");
 			});
 			//jasonwap手机端插件库
 			$("#index_box .jasonwap").bind("click",function(){

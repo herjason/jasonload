@@ -1,4 +1,4 @@
-var site_url=window.location.host?"http://"+window.location.host+"/":"file:///G:/百度云同步盘/创作/jasonload/demo/";
+var site_url=window.location.host?"http://"+window.location.host+"/":"file:///G:/创业/git-program/create/jasonload/demo/";
 var view_url=site_url;
 var img_url=view_url+"assets/img/";
 jl.config({
@@ -11,6 +11,7 @@ jl.config({
 	paths:{
 		"js":"js",
 		"css":"css",
+		"common_plugin":"jasonload/common_plugin",
 		"jasonwap":"jasonload/jasonwap",
 		"jasonweb":"jasonload/jasonweb",
 		"relylib":"jasonload/relylib"
