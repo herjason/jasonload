@@ -14,6 +14,7 @@ jl.config({
 		"common_plugin":"jasonload/common_plugin",
 		"jasonwap":"jasonload/jasonwap",
 		"jasonweb":"jasonload/jasonweb",
+		"third_plugin":"jasonload/third_plugin",
 		"relylib":"jasonload/relylib"
 	},
 	map:[
