@@ -31,7 +31,7 @@ define("js/jasonwap/jasonSelectDlg",["appframework","jasonwap/jasonSelectDlg"],f
 		jasonSelectDlgEvent:function(){
 			//返回
 			$('#jasonwap_jasonSelectDlg_box .jTop').bind('click',function(){
-				jl.backtoMod("js/jasonwap/index");
+				jl.backtoMod("js/index");
 			});
 			//单项选择框
 			var dataList=[{id:1,name:"选项1"},{id:2,name:"选项2"},{id:3,name:"选项3"}];

@@ -34,7 +34,7 @@ define("js/jasonwap/index",["jasonwap/jasonSelectDlg"],function(require,exports,
 			var self=this;
 			//返回
 			$('#jasonwap_index_box .jTop').bind('click',function(){
-				jl.backtoMod("js/index");
+				jl.backtoMod();
 			});
 			//弹出框（默认中间弹出）
 			$("#jasonwap_index_box .jasonPopup").bind("click",function(){
