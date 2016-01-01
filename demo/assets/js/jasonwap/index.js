@@ -42,7 +42,7 @@ define("js/jasonwap/index",["jasonwap/jasonSelectDlg"],function(require,exports,
 			});
 			//选择框
 			$("#jasonwap_index_box .jasonSelectDlg").bind("click",function(){
-				jl.gotoMod("js/jasonwap/jasonSelectDlg");
+				jl.gotoMod("js/jasonwap/jasonSelectDlg",{yeddd:"ee"},function(){console.log("to_jasonSelectDlg")});
 			});
 			//工具包
 			$("#jasonwap_index_box .jasonUtil").bind("click",function(){
