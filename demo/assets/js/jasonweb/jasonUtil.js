@@ -45,6 +45,7 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 					'<li class="getTime">转换日期时间2015-05-03 10:59和2015-05-08 10:59为毫秒数</li>'+
 					'<li class="placeholder"><input type="text" placeholder="测试值" /></li>'+
 					'<li class="prompt"><span jasonPrompt="{template}">？</span></li>'+
+					'<li><span class="inputSelectList"><input type="text" /></span></li>'+
 				'</ul>'+
 			'</div>';
 			jl.show(template);
@@ -112,6 +113,8 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 			util.placeholder();
 			//绑定属性jasonPrompt显示提示框
 			util.prompt({template:'<div style="width:80px;border:1px solid #ccc;">这是提示框显示的内容</div>'});
+			//输入框下拉列表
+			util.inputSelectList({src:$("#jasonweb_jasonUtil_box .inputSelectList"),list:[{value:12,text:"12元"},{value:13,text:"13元"}],ulStyle:"width:153px;",top:"21px"})
 		}
 	};
 
