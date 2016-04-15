@@ -114,7 +114,20 @@ define("js/jasonweb/jasonUtil",["jquery","jasonweb/jasonUtil"],function(require,
 			//绑定属性jasonPrompt显示提示框
 			util.prompt({template:'<div style="width:80px;border:1px solid #ccc;">这是提示框显示的内容</div>'});
 			//输入框下拉列表
-			util.inputSelectList({src:$("#jasonweb_jasonUtil_box .inputSelectList"),list:[{value:12,text:"12元"},{value:13,text:"13元"}],ulStyle:"width:153px;",top:"21px"})
+			$("#jasonweb_jasonUtil_box .inputSelectList input").bind("keyup",function(){
+				var $obj = $(this);
+				var val = $obj.val();
+				var list = [];
+				if(val.length==1){
+					list = [{value:12,text:"12元"},{value:13,text:"13元"},{value:14,text:"14元"},{value:15,text:"15元"},{value:16,text:"16元"}];
+				}else if(val.length==2){
+					list = [{value:12,text:"12元"},{value:13,text:"13元"},{value:16,text:"16元"}];
+				}else if(val.length<5&&val.length>0){
+					list = [{value:12,text:"12元"}];
+				}
+
+				util.inputSelectList({src:$("#jasonweb_jasonUtil_box .inputSelectList"),list:list,ulStyle:"width:153px;",top:"21px"});
+			});
 		}
 	};
 
