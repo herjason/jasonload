@@ -25,8 +25,12 @@ define("js/index",["jquery"],function(require,exports,module){
 				'<div class="jMargin3">部分接口演示</div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
 					'<li class="template">跳转到template模板页</li>'+
-					'<li class="setDataBtn">缓存数据</li>'+
-					'<li class="getDataBtn">获取缓存数据</li>'+
+					'<li class="setDataBtn">设置当前缓存数据</li>'+
+					'<li class="setDataAllBtn">设置全局缓存数据</li>'+
+					'<li class="getDataBtn">获取当前缓存数据</li>'+
+					'<li class="getDataAllBtn">获取全局缓存数据</li>'+
+					'<li class="removeDataBtn">清除当前缓存数据</li>'+
+					'<li class="removeDataAllBtn">清除全部缓存数据</li>'+
 				'</ul>'+
 				'<div class="jMargin3"><a name="test">插件库</a></div>'+
 				'<ul class="jList jMargin3 jPadding5">'+
@@ -48,9 +52,28 @@ define("js/index",["jquery"],function(require,exports,module){
 				jl.setData("test","success");
 				alert("保存成功");
 			});
+			//setData All
+			$("#index_box .setDataAllBtn").bind("click",function(){
+				jl.setData("test2","success_all","all");
+				alert("全局保存成功");
+			});
 			//getData
 			$("#index_box .getDataBtn").bind("click",function(){
 				alert(jl.getData("test"))
+			});
+			//getData All
+			$("#index_box .getDataAllBtn").bind("click",function(){
+				alert(jl.getData("test2","all"))
+			});
+			//removeData
+			$("#index_box .removeDataBtn").bind("click",function(){
+				jl.removeData("all");
+				alert("全局清除成功");
+			});
+			//removeData All
+			$("#index_box .removeDataAllBtn").bind("click",function(){
+				jl.removeData(true);
+				alert("全部清除成功");
 			});
 			//common_plugin手机电脑通用插件库
 			$("#index_box .common_plugin").bind("click",function(){
